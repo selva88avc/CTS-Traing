@@ -1,0 +1,17 @@
+<form [formGroup]="myform">
+
+    <div formArrayName="mycontrols">
+ <div *ngFor="let ctrlobj of farray.controls; let i=index">
+ <input [formControlName]="i" />
+{{i}} 
+{{ctrlobj.value}}
+
+{{ctrlobj}}
+<button (click)="removeControl(i)">Delete</button>
+<button (click)="getData(i)">Get</button>
+</div> 
+
+    </div>
+</form>
+
+<button (click)="addControl()"> Add new control</button>

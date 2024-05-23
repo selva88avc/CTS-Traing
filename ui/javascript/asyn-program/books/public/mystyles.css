@@ -1,0 +1,10 @@
+.clsdiv
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.clsdiv input, button
+{
+    width: 200px;
+}

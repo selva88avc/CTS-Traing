@@ -1,0 +1,18 @@
+ 
+ <div class="clsbook">
+ 
+
+ <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>Book Details of {{bookobj.id}}</mat-card-title>
+    
+    </mat-card-header>
+    <mat-card-content>
+            <p>{{bookobj.bookName}}</p>
+            <p>{{bookobj.author}} </p>
+            <p>{{bookobj.price}}</p>
+    </mat-card-content>
+
+  </mat-card>
+  <button (click)="deleteBook(bookobj.id)"> Delete </button>
+  </div>

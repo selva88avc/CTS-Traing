@@ -1,0 +1,10 @@
+.clsemp
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.clsemp input
+{
+    width: 250px;
+}

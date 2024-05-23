@@ -1,0 +1,11 @@
+
+<div class="clsadd">
+  <ng-content></ng-content>
+    <h1> Add Product </h1>
+    
+    <input [(ngModel)]="product.id" placeholder="New id" />
+    <input [(ngModel)]="product.name" placeholder="enter name"/>
+    <button (click)="addProduct()">Add Todo</button>
+
+    <app-mybutton>View</app-mybutton>
+  </div>

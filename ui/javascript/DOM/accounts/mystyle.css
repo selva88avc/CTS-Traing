@@ -1,0 +1,11 @@
+.clsresult
+{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+button, #txtsearch
+{
+    width: 300px;
+}

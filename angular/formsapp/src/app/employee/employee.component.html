@@ -1,0 +1,18 @@
+
+<div class="clsemp">
+    <h2> Employee registration</h2>
+  <form  [formGroup]="employee" class="clsemp">
+  <input type="text" id="eid" formControlName="empid">
+  <div  *ngIf="employee.get('empid')?.hasError('required') && employee.get('empid')?.touched">
+  <small> Employee id can not be null</small>
+</div>
+  <input type="text" id="ename" formControlName="empname">
+  <input type="text" id="desig" formControlName="designation">
+  <div  *ngIf="employee.get('designation')?.hasError('uppercase') && employee.get('designation')?.touched">
+    <small> designtin should be in uppercase</small>
+  </div>
+  <button type="submit" (click)="addEmp()">Add</button>
+
+</form>
+
+</div>

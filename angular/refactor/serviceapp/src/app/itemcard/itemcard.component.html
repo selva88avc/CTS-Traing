@@ -1,0 +1,12 @@
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Items</h5>
+      <h6 class="card-subtitle mb-2 text-body-warning">{{itemobj.id}}</h6>
+      <p class="card-text">{{itemobj.itemName}}</p>
+      <p class="card-text">{{itemobj.price}}</p>
+   <button type="button" (click)="delete(itemobj.id)" class="btn btn-danger">Delete</button> 
+   <button type="button" (click)="update(itemobj.id)" class="btn btn-danger">Update</button> 
+
+    </div>
+  </div>
+  

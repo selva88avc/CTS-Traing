@@ -1,0 +1,23 @@
+.clscard
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;  
+}
+
+.clsview
+{
+    background-color: aqua;
+}
+
+.clsadd
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.clsadd input,button
+{
+
+    width: 200px;
+}

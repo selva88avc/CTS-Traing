@@ -1,0 +1,46 @@
+{
+    "AWSTemplateFormatVersion" : "2010-09-09",
+ 
+    "Description" : "Cloud Formation Template To Create S3 bucket",
+ 
+    "Parameters" : {
+        "apr24buck" : {
+        "Type" : "String",
+        "Default" : "cloudiofy-s3-bucket",
+        "Description" : "apr24buck"
+      }
+    },
+ 
+    "Resources": {
+        "CloudiofyS3Bucket": {
+            "Type": "AWS::S3::Bucket",
+            "Properties": {
+                "BucketName": { "Ref" : "apr24buck" },
+                "AccessControl": "Private",
+                "VersioningConfiguration": {
+                    "Status": "Enabled"
+                },
+                "LifecycleConfiguration": {
+                    "Rules": [
+                        {
+                            "Id": "DeleteOldFiles",
+                            "Status": "Enabled",
+                            "Prefix": "old/",
+                            "ExpirationInDays": 30
+                        }
+                    ]
+                },
+                "Tags": [
+                    {
+                        "Key": "Environment",
+                        "Value": "Development"
+                    },
+                    {
+                        "Key": "Owner",
+                        "Value": "info@cloudiofy.com"
+                    }
+                ]
+            }
+        }
+    }
+}

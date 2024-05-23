@@ -1,0 +1,36 @@
+.clsmain
+{
+    background: lawngreen;
+}
+
+#img1
+{
+    width: 100px;
+    height: 100px;
+}
+
+.clsgood
+{
+    color: green;
+    background: white;
+    
+}
+
+.clsbad
+{
+    color: red;
+    background: white;
+
+}
+
+.clsdiv1
+
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.clsdiv1 input,button
+{
+    width: 200px;
+}

@@ -1,0 +1,12 @@
+.clsadd
+{
+    display: flex;
+    flex-direction: column;
+    background-color: bisque;
+
+}
+
+.clsadd input , button
+{
+    width: 200px;
+} 

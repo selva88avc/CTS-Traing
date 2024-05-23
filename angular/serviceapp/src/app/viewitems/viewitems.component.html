@@ -1,0 +1,31 @@
+<section class="clsview">
+
+    <div class="clsadd">
+   <input type="text" [(ngModel)]="itemobj.id" placeholder="enter itemid">
+   <input type="text" [(ngModel)]="itemobj.itemName" placeholder="enter itemName">
+
+   <input type="text" [(ngModel)]="itemobj.price" placeholder="enter price">
+   <button (click)="addItem()">Add Item</button>
+</div>
+
+
+<h1> Item Component</h1>
+    <div class="clscard">
+
+<div  *ngFor="let item of itemsarr">
+
+  
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Items</h5>
+          <h6 class="card-subtitle mb-2 text-body-secondary">{{item.id}}</h6>
+          <p class="card-text">{{item.itemName}}</p>
+          <p class="card-text">{{item.price}}</p>
+          <button type="button" (click)="delete(item.id)" class="btn btn-danger">Delete</button>
+        </div>
+      </div>
+</div>
+</div>
+
+
+</section>

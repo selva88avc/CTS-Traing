@@ -1,0 +1,10 @@
+.clslogin
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.clslogin input,button
+{
+    width: 200px;
+}

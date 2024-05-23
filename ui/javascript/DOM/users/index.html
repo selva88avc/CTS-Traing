@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .clssection
+        {
+            display: flex;
+            flex-direction: column;
+        }
+        .clssection input
+        {
+            width: 200px;
+        }
+        .clssection button
+        {
+            width: 150px;
+        }
+    </style>
+   <script src="myfun.js"></script>
+</head>
+<body>
+    <section class="clssection">
+        
+        <input type="text" id="userid" placeholder="enter userid">
+     <input type="text" id="username" placeholder="enter name">
+     <input type="password" id="password" placeholder="enter password">
+     <input type="email" id="emailid" onblur="validateEmail()"        placeholder="enter emailid">
+     <p id="idpara"></p>
+     <button onclick="validateData()">Validate</button>
+     <button onclick="register()">Register</button>
+ 
+
+     <span id="spaerror"></span>
+    </section>
+
+</body>
+</html>

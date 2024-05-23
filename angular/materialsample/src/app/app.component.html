@@ -1,0 +1,16 @@
+<div>
+
+  <h3> AllData Library </h3>
+
+<button (click)="getData()"> API data</button>
+
+
+<div *ngFor="let course of courses">
+  <p>"Fees"  :  {{course.fees}} "Coursename " {{course.coursename}} </p>
+ 
+</div>
+
+<a routerLink="dashboard"> Dashboard </a>
+<a routerLink="displaybook">  View All Books </a>
+<router-outlet></router-outlet>
+</div>

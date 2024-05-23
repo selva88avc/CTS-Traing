@@ -1,0 +1,34 @@
+<section>
+  <div class="clsform">
+  <form class="clsdata"        name="registerform" #rform="ngForm" (ngSubmit)="addUser()">
+
+    <input type="text" name="userid" #uid="ngModel" [(ngModel)]="userobj.userid" required placeholder="enter userid">
+
+<div *ngIf="uid.touched && uid.invalid">
+<span> User Id shoud not be null</span>
+
+
+</div>
+
+
+   <input type="text" name="uname" #uname="ngModel" [(ngModel)]="userobj.name" required 
+   minlength="3"  placeholder="enter name">
+
+<div *ngIf="uname.touched">
+       <div *ngIf="uname.errors?.['required']"> Name can not be null</div>
+       <div *ngIf="uname.errors?.['minlength']"> Name can not be less than 3  characters</div>
+</div>
+
+ <input type="text" name="emailid" #email="ngModel" [(ngModel)]="userobj.emailid" required
+ placeholder="enter emailid">
+  <div *ngIf="email.touched && email.pristine">
+    <span>Email id is manadate</span>
+ </div>
+
+
+ </form>
+
+
+  </div>
+
+</section> 

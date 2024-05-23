@@ -1,0 +1,12 @@
+<section>
+ <h3> Login form</h3>
+ 
+ <form name="frmlogin" class="clslogin">
+
+    <input type="text" name="username" [formControl]="username" placeholder="enter username">
+    {{validateUser()}}
+    <input type="text" name="password" [formControl]="password" placeholder="enter password">
+    {{validatePass()}}
+    <button (click)="login()"> SignIn</button>
+ </form>
+</section>

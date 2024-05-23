@@ -1,0 +1,41 @@
+<div>
+    <!-- <button (click)="viewBooks()"> View Books</button> -->
+    <h3> Welcome {{uname}} </h3>
+    <div>
+      <input id="searchtext"  [(ngModel)]="searchname" placeholder="Enter bookName to be searched">
+    </div>
+    <table border="3">
+        <tr>
+        <td>bookid</td>
+        <td>bookname</td>
+        <td>author</td>
+        <td>price</td>
+    </tr>
+    <tr *ngFor="let book of books | searchbook : searchname ">
+        
+      <td>{{book.id}}</td>   
+        <td>{{book.bookName}}</td>
+        <td>{{book.author}}</td>
+            <td>{{book.price}}</td>
+            <td><button (click)="deleteBook(book.id)">Delete</button></td>
+            <td><button (click)="validate(book.bookName)">Error Hanlde</button></td>
+    </tr>
+     
+    </table>
+
+
+    
+    <div *ngIf="error; else dataSection" >
+      {{ error }}
+    </div>
+
+
+    <ng-template #dataSection>
+      <div *ngIf="data">
+        <h2>Data:</h2>
+        <p>{{ data }}</p>
+      </div>
+    </ng-template>
+    
+    </div>
+    

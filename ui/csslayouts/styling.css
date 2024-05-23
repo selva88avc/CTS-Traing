@@ -1,0 +1,55 @@
+#ulmenu
+{
+    list-style-type: none;
+    margin: 0px;
+}
+
+
+.clshero div img
+
+{
+    width: 100px;
+    height: 100px;
+
+}
+
+.row img
+{
+    width: 200px;
+    height: 200px;
+}
+
+.clspaper
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#ulmenu
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.clsfooter
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+
+}
+
+
+@media (max-width:500px)
+{
+    .clspaper
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    #idhead1
+    {
+        display: none;
+    }
+}

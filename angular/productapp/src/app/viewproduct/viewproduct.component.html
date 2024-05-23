@@ -1,0 +1,15 @@
+
+<div class="clsview">
+ <h2> View  PRoduct</h2>
+
+<div *ngIf="products$ |async ">
+<ul>
+    <li *ngFor="let product of products$ | async ">
+    {{product.id}} : {{product.name}}
+       </li>
+</ul>
+
+
+</div>
+<button (click)="getData()">Click</button>
+</div>

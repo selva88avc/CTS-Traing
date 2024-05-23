@@ -1,0 +1,47 @@
+<section class="clsmain">
+  <app-header></app-header>
+  <h1 [style.color]="mycolor"> Welcom to AgularAPP</h1>
+
+  Today {{feedbackdate | date:'medium'}}
+  {{title | uppercase}}
+
+  <img id="img1" [attr.src]="logo">
+
+  <button [disabled]="isValid" (click)="display()">Register</button>
+  <a (click)="display()">Just </a>
+
+  <!-- <button onclick="display()">Display</button> -->
+
+  <h4 [ngStyle]="mystyle"> Customer Review : {{comment}} </h4>
+ <div *ngIf="rating>=4 then  truepart else falsepart"> </div> 
+ <ng-template #truepart>
+  <h3> Star Rated Review</h3>
+ </ng-template>
+
+ <ng-template #falsepart>
+  <h3> Rating is not good, kindly check</h3>
+ </ng-template>
+
+
+ <ng-template #mytemp1>
+  <h4> Hellow all </h4>
+ </ng-template>
+
+ <ul *ngFor="let product of products">
+  <li>{{product}}</li>
+</ul>
+
+  <h3 [ngClass]="isGood ? 'clsgood' : 'clsbad' "> Overall Feedback{{status}} </h3>
+<div class="clsdiv1">
+ <input type="text" [(ngModel)]="username" placeholder="enter username">
+Welcome {{username}}
+
+<input type="text" #email placeholder="Enter emailid">
+
+
+
+<button (click)="validate(email.value)">Validate Email</button>
+</div>
+
+<app-footer></app-footer>
+</section>

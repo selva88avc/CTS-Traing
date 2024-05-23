@@ -1,0 +1,44 @@
+<div>
+
+  <h3>Items</h3>
+
+  <section class="cls1">
+    <input type="text" placeholder="Enter Id" [(ngModel)]="itemobj.id">
+  <input type="text" placeholder="Enter itemname" [(ngModel)]="itemobj.itemName">
+  <input type="text" placeholder="Enter Price" [(ngModel)]="itemobj.price">
+
+</section>
+
+
+
+
+
+
+     
+<button (click)="addItem()">  Add Items</button>
+
+
+
+<h3 [ngClass]=" isMore ?'more':'less' "> Items Available </h3>
+
+<input [(ngModel)]="searchdata" placeholder="Enter itemname to search">
+{{searchdata}}
+<table border="4" >
+    <tr>
+        <td>id</td>
+        <td> itemname</td>
+        <td>Price</td>
+    </tr>
+  
+
+    <tr *ngFor="let item of items  | search : searchdata">
+        <td>{{item.id}}</td>
+
+        <td>{{item.itemName}}</td>
+        <td>{{item.price}}</td>
+        <td> <button (click)="deleteItem(item.id)">Delete</button></td>
+    </tr>
+</table>
+
+
+</div>

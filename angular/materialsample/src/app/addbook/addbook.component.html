@@ -1,0 +1,36 @@
+<div>    <h3> Book Dashboard</h3>
+  <input type="text" placeholder="enter username" [(ngModel)]="username">
+
+    <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          
+          <mat-panel-description>
+             Click to Add new Books
+          </mat-panel-description>
+                  </mat-expansion-panel-header>
+
+                  <div class="clsadd">
+                    <h6> Add new Book </h6>
+                   
+                  <form [formGroup]="bookform">
+                  
+                  <input id="bid" formControlName="id" placeholder="Enter book id">
+                  
+                  <input id="bname" formControlName="bookName" placeholder="Enter book name">
+                  <input id="bid" formControlName="author" placeholder="Enter book author">
+                  <input id="bid" formControlName="price" placeholder="Enter price">
+                  
+                  <button (click)="addbook()">Add</button>
+                  
+                  <button (click)="show()" mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
+                    <mat-icon>favorite</mat-icon>
+                  </button>
+
+                  </form>
+                  
+                  
+                  </div>
+   
+      </mat-expansion-panel>
+
+  

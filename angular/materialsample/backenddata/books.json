@@ -1,0 +1,34 @@
+{
+  "books": [
+    {
+      "id": "76",
+      "bookName": "CPP",
+      "author": "narayan",
+      "price": "344"
+    },
+    {
+      "id": "25",
+      "bookName": "Spring in action",
+      "author": "Kargi",
+      "price": "560"
+    },
+    {
+      "id": "789",
+      "bookName": "C",
+      "author": "Guruswamy",
+      "price": "300"
+    },
+    {
+      "id": "35",
+      "bookName": "Java8",
+      "author": "Marshel",
+      "price": "93"
+    },
+    {
+      "id": "9",
+      "bookName": "truecall",
+      "author": "tina",
+      "price": "67"
+    }
+  ]
+}
